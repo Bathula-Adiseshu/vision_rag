@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "llm_provider": "deepseek",
+    "has_openai_key": false,
+    "has_deepseek_key": false,
+    "vision_enabled": true,
+    "embedding_provider": "jina"
+  },
+  "tests": {
+    "image_query": {
+      "query": "Show me the transformer architecture diagram and explain what you see",
+      "total_sources": 8,
+      "image_sources": 0,
+      "vision_llm_used": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer_length": 299
+    }
+  }
+}

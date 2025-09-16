@@ -1,0 +1,243 @@
+{
+  "ingestion": {
+    "success": true,
+    "file_path": "attention_all_you_need.pdf",
+    "document_ids": [
+      460713745615579055,
+      460713745615579056,
+      460713745615579057,
+      460713745615579058,
+      460713745615579059,
+      460713745615579060,
+      460713745615579061,
+      460713745615579062,
+      460713745615579063,
+      460713745615579064,
+      460713745615579065,
+      460713745615579066,
+      460713745615579067,
+      460713745615579068,
+      460713745615579069,
+      460713745615579070,
+      460713745615579071,
+      460713745615579072,
+      460713745615579073,
+      460713745615579074,
+      460713745615579075,
+      460713745615579076,
+      460713745615579077,
+      460713745615579078,
+      460713745615579079,
+      460713745615579080,
+      460713745615579081,
+      460713745615579082,
+      460713745615579083,
+      460713745615579084,
+      460713745615579085,
+      460713745615579086,
+      460713745615579087,
+      460713745615579088,
+      460713745615579089,
+      460713745615579090,
+      460713745615579091,
+      460713745615579092,
+      460713745615579093,
+      460713745615579094,
+      460713745615579095,
+      460713745615579096,
+      460713745615579097,
+      460713745615579098,
+      460713745615579099,
+      460713745615579100,
+      460713745615579101,
+      460713745615579102,
+      460713745615579103,
+      460713745615579104,
+      460713745615579105,
+      460713745615579106,
+      460713745615579107,
+      460713745615579108,
+      460713745615579109,
+      460713745615579110,
+      460713745615579111,
+      460713745615579112,
+      460713745615579114,
+      460713745615579115,
+      460713745615579116
+    ],
+    "processing_stats": {
+      "total_documents": 61,
+      "text_documents": 58,
+      "image_documents": 3,
+      "total_images": 3
+    },
+    "collection_stats": {
+      "exists": true,
+      "num_entities": 0,
+      "collection_name": "vision_rag_collection",
+      "schema": "{'auto_id': True, 'description': '', 'fields': [{'name': 'text', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'pk', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': True}, {'name': 'vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 2048}}, {'name': 'source', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'page', 'description': '', 'type': <DataType.INT64: 5>}, {'name': 'chunk_id', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'content_type', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}], 'enable_dynamic_field': False}"
+    },
+    "message": "Successfully ingested 61 documents"
+  },
+  "image_queries": {
+    "Show me the transformer architecture diagram": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "What does the multi-head attention visualization look like?": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Display the encoder-decoder structure diagram": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Show me any performance comparison charts or graphs": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "What figures illustrate the attention mechanism?": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Find diagrams showing the model architecture": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Show me visual representations of the transformer model": {
+      "total_sources": 10,
+      "image_sources": 0,
+      "answer_length": 299,
+      "used_vision_llm": false,
+      "images_in_context": 0,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    }
+  },
+  "table_queries": {
+    "Show me performance comparison tables": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "What are the BLEU scores in the results table?": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Display training time comparisons": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Show me the model size and parameter counts": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "What are the performance metrics in tabular format?": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Find tables showing experimental results": {
+      "total_sources": 8,
+      "table_relevant_sources": 1,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    },
+    "Show me computational complexity comparisons": {
+      "total_sources": 8,
+      "table_relevant_sources": 0,
+      "answer_length": 299,
+      "success": true,
+      "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai...."
+    }
+  },
+  "architecture_queries": {
+    "Explain the transformer architecture using the diagram": {
+      "text_sources": 0,
+      "image_sources": 0,
+      "used_vision_llm": false,
+      "answer_length": 299,
+      "success": true
+    },
+    "How does the encoder-decoder structure work based on the visual?": {
+      "text_sources": 0,
+      "image_sources": 0,
+      "used_vision_llm": false,
+      "answer_length": 299,
+      "success": true
+    },
+    "Describe the multi-head attention mechanism from the figure": {
+      "text_sources": 0,
+      "image_sources": 0,
+      "used_vision_llm": false,
+      "answer_length": 299,
+      "success": true
+    },
+    "What does the positional encoding diagram show?": {
+      "text_sources": 0,
+      "image_sources": 0,
+      "used_vision_llm": false,
+      "answer_length": 299,
+      "success": true
+    },
+    "Explain the feed-forward network structure visually": {
+      "text_sources": 0,
+      "image_sources": 0,
+      "used_vision_llm": false,
+      "answer_length": 299,
+      "success": true
+    }
+  },
+  "context_validation": {
+    "total_sources": 5,
+    "image_sources_count": 0,
+    "used_vision_llm": false,
+    "images_in_context": 0,
+    "answer": "I encountered an error while generating the answer: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "image_sources": []
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "test_summary": {
+    "timestamp": "67698.469343826",
+    "total_errors": 0,
+    "system_healthy": true
+  },
+  "configuration": {
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-chat",
+    "embedding_provider": "jina",
+    "vision_enabled": true,
+    "vision_embeddings": true
+  },
+  "detailed_results": {
+    "system_status": {
+      "system_status": "operational",
+      "components": {
+        "llm": {
+          "status": "available",
+          "provider": "deepseek",
+          "model": "deepseek-chat"
+        },
+        "embeddings": {
+          "status": "unavailable",
+          "service_url": "http://localhost:8000/v1/embeddings",
+          "text_model": "jinaai/jina-embeddings-v4-vllm-code",
+          "vision_model": "jinaai/jina-embeddings-v4-vllm-code"
+        },
+        "vector_store": {
+          "status": "available",
+          "collection_stats": {
+            "exists": true,
+            "num_entities": 0,
+            "collection_name": "vision_rag_collection",
+            "schema": "{'auto_id': True, 'description': '', 'fields': [{'name': 'text', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'pk', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': True}, {'name': 'vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 2048}}, {'name': 'source', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'page', 'description': '', 'type': <DataType.INT64: 5>}, {'name': 'chunk_id', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'content_type', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}], 'enable_dynamic_field': False}"
+          }
+        }
+      },
+      "configuration": {
+        "multimodal_enabled": true,
+        "hybrid_search_enabled": true,
+        "chunk_size": 800,
+        "top_k_retrieval": 5
+      },
+      "checks": {
+        "llm_available": false,
+        "vector_store_connected": false,
+        "embedding_service_ready": false
+      }
+    },
+    "ingestion_tests": {
+      "attention_all_you_need.pdf": {
+        "success": true,
+        "documents_count": 61,
+        "stats": {
+          "total_documents": 61,
+          "text_documents": 58,
+          "image_documents": 3,
+          "total_images": 3
+        },
+        "collection_stats": {
+          "exists": true,
+          "num_entities": 0,
+          "collection_name": "vision_rag_collection",
+          "schema": "{'auto_id': True, 'description': '', 'fields': [{'name': 'text', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'pk', 'description': '', 'type': <DataType.INT64: 5>, 'is_primary': True, 'auto_id': True}, {'name': 'vector', 'description': '', 'type': <DataType.FLOAT_VECTOR: 101>, 'params': {'dim': 2048}}, {'name': 'source', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'page', 'description': '', 'type': <DataType.INT64: 5>}, {'name': 'chunk_id', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}, {'name': 'content_type', 'description': '', 'type': <DataType.VARCHAR: 21>, 'params': {'max_length': 65535}}], 'enable_dynamic_field': False}"
+        }
+      }
+    },
+    "query_tests": {
+      "What is the transformer architecture?": {
+        "success": true,
+        "answer_length": 227,
+        "sources_count": 5,
+        "search_type": "hybrid",
+        "has_answer": true
+      },
+      "How does attention mechanism work?": {
+        "success": true,
+        "answer_length": 227,
+        "sources_count": 5,
+        "search_type": "hybrid",
+        "has_answer": true
+      },
+      "What are the key components of the model?": {
+        "success": true,
+        "answer_length": 227,
+        "sources_count": 5,
+        "search_type": "hybrid",
+        "has_answer": true
+      },
+      "Explain the encoder-decoder structure": {
+        "success": true,
+        "answer_length": 227,
+        "sources_count": 5,
+        "search_type": "hybrid",
+        "has_answer": true
+      }
+    },
+    "image_tests": {
+      "Show me diagrams from the document": {
+        "success": true,
+        "total_sources": 10,
+        "image_sources": 3,
+        "answer_length": 227,
+        "has_image_content": false,
+        "image_details": [
+          {
+            "index": 2,
+            "type": "image",
+            "page": 3,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 3: Technical diagram or figure",
+            "description": "Image extracted from page 3: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 4,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 6,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          }
+        ]
+      },
+      "What figures are available?": {
+        "success": true,
+        "total_sources": 10,
+        "image_sources": 3,
+        "answer_length": 227,
+        "has_image_content": false,
+        "image_details": [
+          {
+            "index": 2,
+            "type": "image",
+            "page": 3,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 3: Technical diagram or figure",
+            "description": "Image extracted from page 3: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 4,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 6,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          }
+        ]
+      },
+      "Describe any charts or tables": {
+        "success": true,
+        "total_sources": 10,
+        "image_sources": 3,
+        "answer_length": 227,
+        "has_image_content": false,
+        "image_details": [
+          {
+            "index": 2,
+            "type": "image",
+            "page": 3,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 3: Technical diagram or figure",
+            "description": "Image extracted from page 3: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 4,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 6,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          }
+        ]
+      },
+      "What visual elements are in the document?": {
+        "success": true,
+        "total_sources": 10,
+        "image_sources": 3,
+        "answer_length": 227,
+        "has_image_content": false,
+        "image_details": [
+          {
+            "index": 2,
+            "type": "image",
+            "page": 3,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 3: Technical diagram or figure",
+            "description": "Image extracted from page 3: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 4,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 6,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          }
+        ]
+      },
+      "Find images with architectural diagrams": {
+        "success": true,
+        "total_sources": 10,
+        "image_sources": 3,
+        "answer_length": 227,
+        "has_image_content": false,
+        "image_details": [
+          {
+            "index": 2,
+            "type": "image",
+            "page": 3,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 3: Technical diagram or figure",
+            "description": "Image extracted from page 3: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 4,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          },
+          {
+            "index": 6,
+            "type": "image",
+            "page": 4,
+            "source": "attention_all_you_need.pdf",
+            "content": "Image extracted from page 4: Technical diagram or figure",
+            "description": "Image extracted from page 4: Technical diagram or figure",
+            "width": null,
+            "height": null,
+            "image_url": null
+          }
+        ]
+      },
+      "vision_What do you see in the transformer architecture diagram?": {
+        "success": true,
+        "used_vision_llm": true,
+        "image_count": 2,
+        "answer_quality": true
+      },
+      "vision_Describe the visual elements in the figures": {
+        "success": true,
+        "used_vision_llm": true,
+        "image_count": 2,
+        "answer_quality": true
+      },
+      "vision_Analyze any charts or graphs in the document": {
+        "success": true,
+        "used_vision_llm": true,
+        "image_count": 2,
+        "answer_quality": true
+      }
+    },
+    "model_selection_tests": {
+      "llm_provider": "deepseek",
+      "llm_model": "deepseek-chat",
+      "embedding_provider": "jina",
+      "text_embedding_model": "jinaai/jina-embeddings-v4-vllm-code",
+      "vision_embedding_model": "jinaai/jina-embeddings-v4-vllm-code",
+      "use_vision_llm": true,
+      "use_vision_embeddings": true
+    },
+    "errors": []
+  }
+}

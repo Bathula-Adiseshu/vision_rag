@@ -1,0 +1,344 @@
+{
+  "test_summary": {
+    "total_test_categories": 6,
+    "system_operational": true,
+    "ingestion_successful": true,
+    "queries_working": true,
+    "multimodal_working": true,
+    "search_types_working": true,
+    "edge_cases_handled": true
+  },
+  "detailed_results": {
+    "system_status": {
+      "passed": true,
+      "details": {
+        "system_status": "operational",
+        "components": {
+          "llm": {
+            "status": "available",
+            "provider": "deepseek",
+            "model": "deepseek-chat"
+          },
+          "embeddings": {
+            "status": "available",
+            "service_url": "http://localhost:8000/v1/embeddings",
+            "text_model": "jinaai/jina-embeddings-v4-vllm-code",
+            "vision_model": "jinaai/jina-embeddings-v4-vllm-code"
+          },
+          "vector_store": {
+            "status": "unavailable",
+            "collection_stats": {
+              "exists": false,
+              "error": "type object 'Collection' has no attribute 'exists'"
+            }
+          }
+        },
+        "configuration": {
+          "multimodal_enabled": true,
+          "hybrid_search_enabled": true,
+          "chunk_size": 800,
+          "top_k_retrieval": 5
+        }
+      },
+      "components_available": {
+        "llm": true,
+        "embeddings": true,
+        "vector_store": false
+      }
+    },
+    "document_ingestion": {
+      "passed": true,
+      "details": {
+        "success": true,
+        "file_path": "attention_all_you_need.pdf",
+        "document_ids": [
+          460713745615577667,
+          460713745615577668,
+          460713745615577669,
+          460713745615577670,
+          460713745615577671,
+          460713745615577672,
+          460713745615577673,
+          460713745615577674,
+          460713745615577675,
+          460713745615577676,
+          460713745615577677,
+          460713745615577678,
+          460713745615577679,
+          460713745615577680,
+          460713745615577681,
+          460713745615577682,
+          460713745615577683,
+          460713745615577684,
+          460713745615577685,
+          460713745615577686,
+          460713745615577687,
+          460713745615577688,
+          460713745615577689,
+          460713745615577690,
+          460713745615577691,
+          460713745615577692,
+          460713745615577693,
+          460713745615577694,
+          460713745615577695,
+          460713745615577696,
+          460713745615577697,
+          460713745615577698,
+          460713745615577699,
+          460713745615577700,
+          460713745615577701,
+          460713745615577702,
+          460713745615577703,
+          460713745615577704,
+          460713745615577705,
+          460713745615577706,
+          460713745615577707,
+          460713745615577708,
+          460713745615577709,
+          460713745615577710,
+          460713745615577711,
+          460713745615577712,
+          460713745615577713,
+          460713745615577714,
+          460713745615577715,
+          460713745615577716,
+          460713745615577717,
+          460713745615577718,
+          460713745615577719,
+          460713745615577720,
+          460713745615577721,
+          460713745615577722,
+          460713745615577723,
+          460713745615577724,
+          460713745615577725,
+          460713745615577726,
+          460713745615577727,
+          460713745615577728,
+          460713745615577729,
+          460713745615577730,
+          460713745615577731,
+          460713745615577732,
+          460713745615577733
+        ],
+        "processing_stats": {
+          "total_documents": 67,
+          "text_documents": 64,
+          "image_documents": 3,
+          "total_images": 3
+        },
+        "collection_stats": {
+          "exists": false,
+          "error": "type object 'Collection' has no attribute 'exists'"
+        },
+        "message": "Successfully ingested 67 documents"
+      },
+      "stats": {
+        "total_documents": 67,
+        "text_documents": 64,
+        "image_documents": 3,
+        "total_images": 3
+      },
+      "collection_stats": {
+        "exists": false,
+        "error": "type object 'Collection' has no attribute 'exists'"
+      }
+    },
+    "text_queries": {
+      "total_queries": 8,
+      "successful_queries": 8,
+      "results": [
+        {
+          "query": "What is the transformer architecture?",
+          "success": true,
+          "answer_length": 2216,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "Explain the attention mechanism",
+          "success": true,
+          "answer_length": 1722,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "What are the key components of the transformer model?",
+          "success": true,
+          "answer_length": 1946,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "How does multi-head attention work?",
+          "success": true,
+          "answer_length": 1958,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "What is positional encoding?",
+          "success": true,
+          "answer_length": 1943,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "What are the advantages of the transformer over RNNs?",
+          "success": true,
+          "answer_length": 1937,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "Describe the encoder-decoder structure",
+          "success": true,
+          "answer_length": 1651,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        },
+        {
+          "query": "What is self-attention?",
+          "success": true,
+          "answer_length": 1788,
+          "num_sources": 5,
+          "num_images": 0,
+          "search_type": "hybrid",
+          "error": null
+        }
+      ]
+    },
+    "multimodal_queries": {
+      "total_queries": 5,
+      "successful_queries": 5,
+      "queries_with_images": 0,
+      "results": [
+        {
+          "query": "Show me the transformer architecture diagram and explain its components",
+          "success": true,
+          "answer_length": 2446,
+          "num_sources": 4,
+          "num_images": 0,
+          "has_image_references": false,
+          "error": null
+        },
+        {
+          "query": "What does the attention visualization look like?",
+          "success": true,
+          "answer_length": 1096,
+          "num_sources": 4,
+          "num_images": 0,
+          "has_image_references": false,
+          "error": null
+        },
+        {
+          "query": "Describe any figures or diagrams in the paper",
+          "success": true,
+          "answer_length": 854,
+          "num_sources": 4,
+          "num_images": 0,
+          "has_image_references": false,
+          "error": null
+        },
+        {
+          "query": "Are there any mathematical formulas or equations shown in images?",
+          "success": true,
+          "answer_length": 874,
+          "num_sources": 4,
+          "num_images": 0,
+          "has_image_references": false,
+          "error": null
+        },
+        {
+          "query": "What visual elements support the explanation of attention mechanisms?",
+          "success": true,
+          "answer_length": 1359,
+          "num_sources": 4,
+          "num_images": 0,
+          "has_image_references": false,
+          "error": null
+        }
+      ]
+    },
+    "search_types": {
+      "results": [
+        {
+          "search_type": "hybrid",
+          "success": true,
+          "num_sources": 5,
+          "answer_length": 2440,
+          "error": null
+        },
+        {
+          "search_type": "similarity",
+          "success": true,
+          "num_sources": 5,
+          "answer_length": 2516,
+          "error": null
+        },
+        {
+          "search_type": "multimodal",
+          "success": true,
+          "num_sources": 3,
+          "answer_length": 2053,
+          "error": null
+        }
+      ],
+      "all_types_working": true
+    },
+    "edge_cases": {
+      "total_cases": 5,
+      "handled_gracefully": 5,
+      "results": [
+        {
+          "description": "Empty query",
+          "query": "",
+          "success": true,
+          "handled_gracefully": true,
+          "error": null
+        },
+        {
+          "description": "Whitespace only query",
+          "query": "   ",
+          "success": true,
+          "handled_gracefully": true,
+          "error": null
+        },
+        {
+          "description": "Very long query",
+          "query": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...",
+          "success": true,
+          "handled_gracefully": true,
+          "error": null
+        },
+        {
+          "description": "Query about unrelated topic",
+          "query": "What is quantum computing?",
+          "success": true,
+          "handled_gracefully": true,
+          "error": null
+        },
+        {
+          "description": "Emoji only query",
+          "query": "\ud83d\ude80\ud83c\udfaf\ud83d\udca1",
+          "success": true,
+          "handled_gracefully": true,
+          "error": null
+        }
+      ]
+    }
+  }
+}
